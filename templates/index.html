@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Menú de opciones</h1>
+    <ul>
+        <li><a href="{{ url_for('curso') }}">Inscripción en curso</a></li>
+        <li><a href="{{ url_for('usuario') }}">Registro de usuario</a></li>
+        <li><a href="{{ url_for('producto') }}">Registro de productos</a></li>
+        <li><a href="{{ url_for('libro') }}">Registro de libros</a></li>
+    </ul>
+</body>
+</html>

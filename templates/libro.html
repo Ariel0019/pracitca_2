@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Libros</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Libros</h1>
+        <form method="POST">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" required>
+
+            <label for="resumen">Resumen:</label>
+            <textarea id="resumen" name="resumen" rows="4" cols="50" required></textarea>
+
+            <label>Formato:</label><br>
+            <input type="radio" id="fisico" name="formato" value="Físico" required>
+            <label for="fisico">Físico</label>
+            <input type="radio" id="magnetico" name="formato" value="Magnético" required>
+            <label for="magnetico">Magnético</label>
+
+            <input type="submit" value="Enviar">
+        </form>
+        <br>
+        <div class="back-link">
+            <a href="{{ url_for('index') }}">Volver al menú principal</a>
+        </div>
+    </div>
+</body>
+</html>
